@@ -1,0 +1,14 @@
+Requirements for minrts:
+    Highest priorities:
+        Modular.
+        Minimalistic.
+                
+    Learn junit.
+    Relearn Object Oriented Design Patterns.
+    Learn GUI's, Using images, etc.
+    
+    
+    
+Tasks:
+    Make a Button Panel
+    Make a MainScreen Panel
