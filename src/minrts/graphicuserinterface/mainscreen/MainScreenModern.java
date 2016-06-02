@@ -18,11 +18,10 @@ public class MainScreenModern extends MainScreenAbstract
 	{
 		MAINSCREENWIDTH = 600;
 		MAINSCREENHEIGHT = 400;
-		this.setSize(MAINSCREENWIDTH, MAINSCREENHEIGHT);
 		this.setVisible(true);
 		
 		
-		
+		this.setSize(MAINSCREENWIDTH, MAINSCREENHEIGHT);
 	}
 	
 	

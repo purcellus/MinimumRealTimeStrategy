@@ -20,7 +20,7 @@ public class WholeScreenModern extends WholeScreenAbstract
 
 	//Similar to "Game" From minshmup
 	
-	public WholeScreenModern(int mywidth, int myheight)
+	public WholeScreenModern()
 	{
 		this.setVisible(true);
 		this.setTitle("MinimumRealTimeStrategy");
@@ -31,6 +31,7 @@ public class WholeScreenModern extends WholeScreenAbstract
 		
 		//Make the components here.
 		factoryWholeScreen();
+		this.setSize(1200, 600);
 	}
 	
 	
@@ -42,6 +43,7 @@ public class WholeScreenModern extends WholeScreenAbstract
 	@Override
 	public void factoryWholeScreen() 
 	{
+		
 		this.setLayout(new BorderLayout());
 		
 		SidebarAbstract modernsidebar = new SidebarModern();
@@ -49,7 +51,6 @@ public class WholeScreenModern extends WholeScreenAbstract
 		
 		///this.add(modernmainscreen, BorderLayout.CENTER);
 		this.add(modernsidebar, BorderLayout.EAST);
-		
 		
 	}//the standard whole screen.
 
