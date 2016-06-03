@@ -1,6 +1,7 @@
 package minrts.graphicuserinterface.sidebar;
 
 import java.awt.GridLayout;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
@@ -24,8 +25,9 @@ public class SidebarModern extends SidebarAbstract
 	{
 		SIDEBARWIDTH = 100;
 		SIDEBARHEIGHT = 400;
-		this.setSize(SIDEBARWIDTH, SIDEBARHEIGHT);
 		factorySidebar();
+		this.setSize(SIDEBARWIDTH, SIDEBARHEIGHT);
+
 	}
 	
 	/*Sidebar will be a Grid Layout, 4 x 8.
@@ -60,6 +62,14 @@ public class SidebarModern extends SidebarAbstract
 				this.add(listofbuttons[rowcounter][columncounter]);//add the button to the JPanel.
 			}
 		}
+		
+	}
+	
+	
+	//Add action listeners to the buttons.
+	@Override
+	public void addListenerTo(ActionListener thelistener)
+	{
 		
 	}
 }

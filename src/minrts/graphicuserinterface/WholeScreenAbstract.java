@@ -1,6 +1,12 @@
 package minrts.graphicuserinterface;
 
+import java.awt.BorderLayout;
+
 import javax.swing.JFrame;
+
+import minrts.graphicuserinterface.mainscreen.MainScreenAbstract;
+import minrts.graphicuserinterface.menu.TopMenuAbstract;
+import minrts.graphicuserinterface.sidebar.SidebarAbstract;
 
 public abstract class WholeScreenAbstract extends JFrame
 {
@@ -13,11 +19,52 @@ public abstract class WholeScreenAbstract extends JFrame
 	/**
 	 * 
 	 */
+	
+	
+	private SidebarAbstract mysidebar;//buttons to press
+	private MainScreenAbstract  mymainscreen;//main screen and visuals.
+	private TopMenuAbstract  mytopmenu;//top menu
+	
 	private static final long serialVersionUID = 1L;
 
-	//build the entire screen's dependencies (ex. sidebar).
-	public void factoryWholeScreen()
+	/*build the entire screen's dependencies (ex. sidebar).
+	 * 
+	 */
+	public void factoryWholeScreen
+	(
+		TopMenuAbstract mytopmenu,
+		MainScreenAbstract mymainscreen, 
+		SidebarAbstract mysidebar
+	)
 	{
-		
+		//set layout.
+		this.setLayout(new BorderLayout());
+
+		//get parameters
+		this.mytopmenu = mytopmenu;
+		this.mymainscreen = mymainscreen;
+		this.mysidebar = mysidebar;
+
+		//use parameters for putting into the layout.
+		this.add(mytopmenu, BorderLayout.NORTH);
+		this.add(mymainscreen, BorderLayout.CENTER);
+		this.add(mysidebar, BorderLayout.EAST);
+
 	}
+	
+	public SidebarAbstract getSidebar()
+	{
+		return mysidebar;
+	}
+	
+	public MainScreenAbstract getMainScreen()
+	{
+		return mymainscreen;
+	}
+	
+	public TopMenuAbstract mytopmenu()
+	{
+		return mytopmenu;
+	}
+	
 }

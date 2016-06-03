@@ -1,5 +1,7 @@
 package minrts.graphicuserinterface.sidebar;
 
+import java.awt.event.ActionListener;
+
 import javax.swing.JPanel;
 
 public abstract class SidebarAbstract extends JPanel
@@ -13,9 +15,20 @@ public abstract class SidebarAbstract extends JPanel
 	
 	//TODO figure out how to make the menu.  Factory?
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+
 	public void factorySidebar()
 	{
 		
 	}
 	
+	
+	public void addListenerTo(ActionListener thelistener)
+	{
+		
+	}
 }
